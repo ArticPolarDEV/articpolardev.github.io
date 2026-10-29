@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: 'Inter Variable', sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --header-height: 4.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --ring: oklch(0.556 0 0);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 5.5rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overscroll-behavior-y: contain;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Container principal */
+  .scroll-container {
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  @media (min-width: 768px) {
+    .scroll-container {
+      scroll-snap-type: y mandatory;
+    }
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* REGRAS APENAS PARA MOBILE */
+  section[id] {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    /* Remove o padding gigante e utiliza um respiro natural */
+    padding-top: 3rem !important;
+    
+
+    /* Compensa a altura do Header ao clicar nos links do menu, sem criar buracos no layout */
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: center;
+  }
+
+  /* A primeira secção (#home) é a ÚNICA que precisa do padding-top, pois inicia no scroll 0 absoluto */
+  section#home {
+    padding-top: calc(var(--header-height) + 2rem) !important;
+  }
+  
+  section#contact {
+    padding-bottom: 1rem !important;
+  }
+
+  /* Faz as divs filhas de z-10 fluírem sem esticar a altura no mobile */
+  section[id]>div.relative.z-10 {
+    height: auto !important;
+    justify-content: flex-start !important;
+    gap: 1.25rem !important;
+  }
+}
+
+@keyframes revealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.reveal-up {
+  animation: revealUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal-up-delayed {
+  animation: revealUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.shimmer-text {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(168, 85, 247, 0.8), rgba(34, 211, 238, 0.8), rgba(255, 255, 255, 0.2));
+  background-size: 200% 100%;
+  animation: shimmer 4s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
