@@ -159,7 +159,7 @@ export default function Contact() {
               <span className="text-[8px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-widest">Connect on socials:</span>
               
               <div className="flex items-center gap-2">
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:[filter:drop-shadow(0_0_8px_rgba(10,102,194,0.6))] transition-all">
+                <a href="https://www.linkedin.com/in/josé-lucas-santos-silva-429a82291a" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:[filter:drop-shadow(0_0_8px_rgba(10,102,194,0.6))] transition-all">
                   <LinkedinIcon className="w-3.5 h-3.5 fill-current" />
                 </a>
                 <a href="https://github.com/ArticPolarDEV" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:[filter:drop-shadow(0_0_8px_rgba(168,85,247,0.6))] transition-all">

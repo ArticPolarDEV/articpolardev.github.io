@@ -8,7 +8,7 @@ export default function Social() {
     <div className="flex items-center gap-4 text-slate-500 dark:text-slate-300">
       {/* LinkedIn - Glow Azul */}
       <a 
-        href="https://linkedin.com" 
+        href="https://www.linkedin.com/in/josé-lucas-santos-silva-429a82291a" 
         target="_blank" 
         rel="noreferrer" 
         className="opacity-80 dark:opacity-60 hover:opacity-100 transition-all duration-300 hover:text-blue-600 dark:hover:text-white hover:[filter:drop-shadow(0_0_6px_rgba(10,102,194,0.4))] dark:hover:[filter:drop-shadow(0_0_8px_rgba(10,102,194,0.8))]"
