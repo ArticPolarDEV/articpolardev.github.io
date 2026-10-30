@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { 
-  Mail, 
-  MapPin, 
-  Send, 
-  MessageSquare, 
-  ArrowUpRight, 
+import {
+  Mail,
+  MapPin,
+  Send,
+  MessageSquare,
+  ArrowUpRight,
   Package,
   CheckCircle2,
   AlertCircle,
@@ -58,8 +58,8 @@ export default function Contact() {
   };
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="relative w-full bg-slate-50 dark:bg-[#070709] box-border px-4 md:px-8 flex flex-col justify-center items-center transition-colors duration-500"
     >
       {/* 🔮 BACKGROUND GLOWS */}
@@ -70,7 +70,7 @@ export default function Contact() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none z-0" />
 
       <div className="relative z-10 w-full max-w-7xl flex-1 flex flex-col justify-between gap-3 min-h-0">
-        
+
         {/* HEADER DA SEÇÃO */}
         <div className="reveal-up flex flex-col space-y-0.5 shrink-0">
           <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-mono text-[11px] uppercase tracking-widest">
@@ -87,10 +87,10 @@ export default function Contact() {
 
         {/* LAYOUT DE CONTATO EM GRID DE 2 COLUNAS */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 items-stretch flex-1 min-h-0">
-          
+
           {/* COLUNA ESQUERDA: INFORMAÇÕES DE ALCANCE (5 colunas) */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-2.5 min-h-0">
-            
+
             {/* CARD DE DETALHES RÁPIDOS */}
             <div className="reveal-up flex-1 bg-white/60 dark:bg-[#0E0E12]/60 border border-slate-200 dark:border-white/10 rounded-2xl p-4 backdrop-blur-xl flex flex-col justify-between space-y-2 min-h-0 shadow-sm dark:shadow-none">
               <div className="space-y-1.5">
@@ -132,9 +132,9 @@ export default function Contact() {
                 </div>
 
                 {/* HISTÓRICO NUGET */}
-                <a 
-                  href="https://www.nuget.org/profiles/JoseLucas" 
-                  target="_blank" 
+                <a
+                  href="https://www.nuget.org/profiles/JoseLucas"
+                  target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between p-1.5 rounded-xl bg-blue-50 dark:bg-blue-500/5 border border-blue-200 dark:border-blue-500/10 hover:border-blue-300 dark:hover:border-blue-500/30 transition group"
                 >
@@ -157,9 +157,9 @@ export default function Contact() {
             {/* CARD DE REDES SOCIAIS NA BASE */}
             <div className="reveal-up bg-white/60 dark:bg-[#0E0E12]/60 border border-slate-200 dark:border-white/10 rounded-2xl p-2.5 flex items-center justify-between backdrop-blur-xl shrink-0 shadow-sm dark:shadow-none">
               <span className="text-[8px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-widest">Connect on socials:</span>
-              
+
               <div className="flex items-center gap-2">
-                <a href="https://www.linkedin.com/in/josé-lucas-santos-silva-429a82291a" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:[filter:drop-shadow(0_0_8px_rgba(10,102,194,0.6))] transition-all">
+                <a href="https://www.linkedin.com/in/jose-lucas-santos-silva-articpolardev" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:[filter:drop-shadow(0_0_8px_rgba(10,102,194,0.6))] transition-all">
                   <LinkedinIcon className="w-3.5 h-3.5 fill-current" />
                 </a>
                 <a href="https://github.com/ArticPolarDEV" target="_blank" rel="noreferrer" className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:[filter:drop-shadow(0_0_8px_rgba(168,85,247,0.6))] transition-all">
@@ -178,7 +178,7 @@ export default function Contact() {
 
           {/* COLUNA DIREITA: FORMULÁRIO DE CONTATO (7 colunas) */}
           <div className="reveal-up lg:col-span-7 bg-white/60 dark:bg-[#0E0E12]/60 border border-slate-200 dark:border-white/10 rounded-2xl p-4 backdrop-blur-xl flex flex-col justify-between space-y-2 min-h-0 shadow-sm dark:shadow-none">
-            
+
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center gap-1.5 text-[8px] font-mono tracking-wider uppercase bg-cyan-100 dark:bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-500/20 px-2 py-0.5 rounded-md">
@@ -192,9 +192,9 @@ export default function Contact() {
                 <div className="grid grid-cols-2 gap-2">
                   <div className="space-y-0.5">
                     <label htmlFor="name" className="text-[8px] font-mono text-slate-600 dark:text-slate-400 uppercase tracking-wider">Your Name</label>
-                    <input 
-                      type="text" 
-                      id="name" 
+                    <input
+                      type="text"
+                      id="name"
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. John Doe"
@@ -206,9 +206,9 @@ export default function Contact() {
 
                   <div className="space-y-0.5">
                     <label htmlFor="email" className="text-[8px] font-mono text-slate-600 dark:text-slate-400 uppercase tracking-wider">Your Email</label>
-                    <input 
-                      type="email" 
-                      id="email" 
+                    <input
+                      type="email"
+                      id="email"
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="e.g. john@example.com"
@@ -221,9 +221,9 @@ export default function Contact() {
 
                 <div className="space-y-0.5">
                   <label htmlFor="subject" className="text-[8px] font-mono text-slate-600 dark:text-slate-400 uppercase tracking-wider">Subject</label>
-                  <input 
-                    type="text" 
-                    id="subject" 
+                  <input
+                    type="text"
+                    id="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="What would you like to discuss?"
@@ -235,8 +235,8 @@ export default function Contact() {
 
                 <div className="space-y-0.5">
                   <label htmlFor="message" className="text-[8px] font-mono text-slate-600 dark:text-slate-400 uppercase tracking-wider">Your Message</label>
-                  <textarea 
-                    id="message" 
+                  <textarea
+                    id="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Hello Jose, I'd like to reach you regarding..."
@@ -247,7 +247,7 @@ export default function Contact() {
                 </div>
 
                 {/* BOTÃO DE SUBMIT DINÂMICO */}
-                <button 
+                <button
                   type="submit"
                   disabled={status === "loading"}
                   className={`w-full border rounded-xl py-2 px-3 text-[11px] font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.98] ${
@@ -261,10 +261,10 @@ export default function Contact() {
                   {status === "loading" && <Loader2 size={12} className="animate-spin text-purple-600 dark:text-purple-400" />}
                   {status === "success" && <CheckCircle2 size={12} className="text-emerald-600 dark:text-emerald-400" />}
                   {status === "error" && <AlertCircle size={12} className="text-red-600 dark:text-red-400" />}
-                  
+
                   {status === "idle" && (
                     <>
-                      Send Message 
+                      Send Message
                       <Send size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </>
                   )}
